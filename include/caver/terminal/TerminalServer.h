@@ -17,6 +17,7 @@ struct lua_State;
 namespace Caver {
 
 class GameViewController;
+class ProgramState;
 
 namespace Terminal {
 
@@ -29,7 +30,7 @@ public:
     void Stop();
 
     // Called once per frame on the main engine thread.
-    void Tick(float deltaTime, GameViewController* viewController, lua_State* L);
+    void Tick(float deltaTime, GameViewController* viewController, lua_State* L = nullptr);
 
     int GetPort() const { return m_port; }
     bool IsRunning() const { return m_running; }
@@ -43,7 +44,7 @@ private:
 
     void NetworkThreadFunc();
     void HandleClientData(int clientFd, const char* data, size_t size);
-    void ExecuteCommand(const std::string& command, lua_State* L, GameViewController* viewController);
+    void ExecuteCommand(const std::string& command, lua_State* L, ProgramState* programState, GameViewController* viewController);
 
     std::atomic<bool> m_running;
     std::atomic<int> m_port;
