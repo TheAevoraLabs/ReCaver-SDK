@@ -11,6 +11,8 @@
 #ifndef CAVER_SCENEOBJECTLIB_H
 #define CAVER_SCENEOBJECTLIB_H
 
+struct lua_State;
+
 namespace Caver {
 
 class ProgramState;
@@ -21,6 +23,7 @@ public:
     static void PerformCleanupForSceneObject(ProgramState* state,
                                              SceneObject* object);
     static void PushSceneObject(ProgramState* state, SceneObject* object);
+    static void PushSceneObject(lua_State* L, SceneObject* object);
     static void RegisterLibrary(ProgramState* state);
 };
 

@@ -6,6 +6,8 @@
 #ifndef CAVER_PROGRAMMATH_H
 #define CAVER_PROGRAMMATH_H
 
+struct lua_State;
+
 namespace Caver {
 
 class ProgramState;
@@ -20,6 +22,8 @@ public:
     static void RegisterMathLibrary(ProgramState* state);
     static void PushVector3(ProgramState* state, const Vector3& value);
     static void PushRectangle(ProgramState* state, const Rectangle& value);
+    static void PushVector3(lua_State* L, const Vector3& value);
+    static void PushRectangle(lua_State* L, const Rectangle& value);
 };
 
 } // namespace Caver
