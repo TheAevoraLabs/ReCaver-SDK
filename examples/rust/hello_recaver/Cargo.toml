@@ -1,0 +1,11 @@
+[package]
+name = "hello_recaver"
+version = "0.1.0"
+edition = "2021"
+authors = ["Quantum Creeper / Aevora Labs"]
+description = "Native Rust mod example for ReCaver"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]

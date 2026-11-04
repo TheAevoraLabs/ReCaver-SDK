@@ -1,0 +1,9 @@
+[mod]
+id = "hello_recaver_rust"
+name = "Hello ReCaver (Rust)"
+version = "1.0.0"
+author = "Quantum Creeper / Aevora Labs"
+description = "Native Rust cdylib mod demonstrating recaver_mod_init lifecycle"
+
+[entry]
+native = "bin/linux-x86_64/libhello_recaver.so"

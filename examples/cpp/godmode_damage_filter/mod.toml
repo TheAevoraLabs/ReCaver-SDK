@@ -1,0 +1,9 @@
+[mod]
+id = "godmode_damage_filter"
+name = "Godmode and Damage Multiplier"
+version = "1.0.0"
+author = "Quantum Creeper / Aevora Labs"
+description = "Native C++ damage interceptor demonstration"
+
+[entry]
+native = "bin/linux-x86_64/libgodmode_damage_filter.so"
